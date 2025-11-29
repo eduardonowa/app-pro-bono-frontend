@@ -73,7 +73,7 @@ const areaOptions = [
 
 onMounted(async () => {
   const { data } = await axios.get(`${API_URL}/api/submissions`);
-  list.value = data.reverse(); // mais recentes primeiro
+  list.value = data.reverse();
 });
 
 const filtered = computed(() => {
@@ -118,20 +118,19 @@ function formatDate(d) {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
-  table-layout: fixed; /* 💥 Força todas as colunas a terem largura consistente */
+  table-layout: fixed;
 }
 
 .admin-table th,
 .admin-table td {
   padding: 0.7rem;
   border-bottom: 1px solid #ddd;
-  text-align: left; /* Alinha tudo certinho */
-  white-space: nowrap; /* Evita quebrar texto */
+  text-align: left;
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* Se ficar grande, coloca "..." */
+  text-overflow: ellipsis;
 }
 
-/* Define larguras consistentes por coluna */
 .admin-table th:nth-child(1),
 .admin-table td:nth-child(1) {
   width: 25%;
