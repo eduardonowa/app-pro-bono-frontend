@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import FormView from '../views/FormView.vue';
-import AdminLogin from '@/views/admin/AdminLogin.vue';
-import AdminList from '@/views/admin/AdminList.vue';
-import AdminDetails from '@/views/admin/AdminDetails.vue';
+import AdminLogin from '@/views/AdminLogin.vue';
+import AdminList from '@/views/AdminList.vue';
+import AdminDetails from '@/views/AdminDetails.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
