@@ -28,25 +28,23 @@ const router = createRouter({
       path: '/admin',
       name: 'admin-list',
       component: AdminList,
-      meta: { requiresAuth: true },
     },
     {
       path: '/admin/:id',
       name: 'admin-details',
       component: AdminDetails,
-      meta: { requiresAuth: true },
     },
   ],
 });
 
-router.beforeEach((to, from, next) => {
-  const isAuth = localStorage.getItem('admin-auth') === 'true';
+// router.beforeEach((to, from, next) => {
+//   const isAuth = localStorage.getItem('admin-auth') === 'true';
 
-  if (to.meta.requiresAuth && !isAuth) {
-    return next({ name: 'admin-login' });
-  }
+//   if (to.meta.requiresAuth && !isAuth) {
+//     return next({ name: 'admin-login' });
+//   }
 
-  next();
-});
+//   next();
+// });
 
 export default router;
