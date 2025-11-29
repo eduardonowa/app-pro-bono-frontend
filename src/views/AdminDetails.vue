@@ -110,12 +110,12 @@ async function exportPDF() {
   // ---------------------------------------------------------
   pdf.setFontSize(20);
   pdf.setFont('helvetica', 'bold');
-  pdf.text('Atendimento Jurídico Pro Bono', margin, y);
+  pdf.text('Rigon e Fassina Advogados Associados', margin, y);
   y += 26;
 
   pdf.setFontSize(12);
   pdf.setFont('helvetica', 'normal');
-  pdf.text('Escritório de Advocacia – Erechim / RS', margin, y);
+  pdf.text('Atendimento Jurídico Pro Bono', margin, y);
   y += 18;
 
   pdf.text('Nosso compromisso é garantir acesso à justiça para todos,', margin, y);
@@ -132,7 +132,7 @@ async function exportPDF() {
   title('Informações da Solicitação');
 
   line(`ID Interno: ${item.value.id}`);
-  line(`Recebido em: ${new Date(item.value.receivedAt).toLocaleString('pt-BR')}`);
+  line(`Recebido em: ${new Date(item.value.createdAt).toLocaleString('pt-BR')}`);
 
   y += 10;
 
@@ -149,7 +149,6 @@ async function exportPDF() {
   line(`${item.value.data.rua}, ${item.value.data.numero}`);
   line(`${item.value.data.bairro} – ${item.value.data.cidade}`);
   line(`CEP: ${item.value.data.cep}`);
-
   y += 10;
 
   // ---------------------------------------------------------
