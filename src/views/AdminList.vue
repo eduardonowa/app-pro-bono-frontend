@@ -113,4 +113,49 @@ function formatDate(d) {
 .btn-sm {
   padding: 0.3rem 0.6rem;
 }
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  table-layout: fixed; /* 💥 Força todas as colunas a terem largura consistente */
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 0.7rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left; /* Alinha tudo certinho */
+  white-space: nowrap; /* Evita quebrar texto */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Se ficar grande, coloca "..." */
+}
+
+/* Define larguras consistentes por coluna */
+.admin-table th:nth-child(1),
+.admin-table td:nth-child(1) {
+  width: 25%;
+}
+
+.admin-table th:nth-child(2),
+.admin-table td:nth-child(2) {
+  width: 25%;
+}
+
+.admin-table th:nth-child(3),
+.admin-table td:nth-child(3) {
+  width: 25%;
+}
+
+.admin-table th:nth-child(4),
+.admin-table td:nth-child(4) {
+  width: 10%;
+  text-align: center;
+}
+
+.admin-table th:nth-child(5),
+.admin-table td:nth-child(5) {
+  width: 15%;
+  text-align: center;
+}
 </style>
