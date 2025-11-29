@@ -1,0 +1,84 @@
+:root {
+  --primary-color: #0a2240; /* Azul escuro */
+  --secondary-color: #1e4a7a;
+  --accent-color: #4caf50; /* Verde para ações */
+  --text-color: #333;
+  --light-text-color: #f5f5f5;
+  --background-color: #f4f7f9;
+  --border-color: #ddd;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+/* --- Estilos de Validação --- */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 2px rgba(30, 74, 122, 0.2);
+  outline: none;
+}
+
+form.submitted .form-group input:invalid,
+form.submitted .form-group select:invalid,
+form.submitted .form-group textarea:invalid {
+  border-color: #e53e3e; /* Vermelho para erro */
+  background-color: #fff5f5;
+}
